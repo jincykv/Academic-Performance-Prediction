@@ -1,0 +1,28 @@
+{% extends 'headerfooter.html' %}
+{% block content %}
+<html>
+<head><title>Login</title></head>
+<body>
+	
+<div class="frm">	
+	<h1 align="center">Admin Login</h1></div>
+	<form class="frm" action="/admin_login/" method="POST">
+		{% csrf_token %} 
+	<table align="center"><tr>
+		<td><input type="text" name="uname" placeholder="Username" class="form-control"></td></tr>
+		<tr>
+			<td><input type="Password" name="pas" placeholder="Password" class="form-control"></td></tr>
+			<tr><td><center><input class="frm" type="submit" name="Login" value="Login"></center></td></tr></table></form>
+		</body>
+		<style type="text/css">
+		
+.frm{
+
+	margin-top: 50px;
+}
+
+
+</style>
+
+{% endblock %}
+		</html>
