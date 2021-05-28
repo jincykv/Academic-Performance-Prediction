@@ -1,0 +1,33 @@
+{% extends 'headerfooter.html' %}
+{% block content %}
+<html>
+<head><title>Registraion</title></head>
+<body>
+<h1  class="frm" align="center">Register Now...</h1>
+<form class="frm" action="/register/" method="POST">
+	{% csrf_token %} 
+<table align="center">
+<tr>
+<td><input type="text" name="name" size="40" placeholder=" Full Name" class="form-control">
+</td>
+<tr>
+<td><input type="text" name="email" size="40" placeholder="Email" class="form-control">
+</td></tr>
+<tr>
+<td><input type="password" size="40" name="password" placeholder="Password" class="form-control"></td>
+</tr>
+<tr>
+<td><input type="text" name="mob" size="40" placeholder="Mobile" class="form-control"></td></tr>
+<tr><td><input type="text" name="state" size="40" placeholder="State" class="form-control"></td></tr>
+<tr><td><input type="text" name="dist" size="40" placeholder="Dist" class="form-control"></td></tr>
+<tr><td><input type="text" name="city" size="40" placeholder="City"class="form-control"></td></tr>
+<tr><th colspan="2"><center><input  class="frm" type="submit" value="Register" name="Register" class="form-control"></center></td></tr></table></form>
+</body>
+<style type="text/css">
+.frm{
+
+	margin-top: 50px;
+}
+</style>
+</html>
+{% endblock %}
