@@ -1,0 +1,33 @@
+{% extends 'Edu_home.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="tab">
+		<h1 align="center">Your Profile</h1>
+<form method="POST" class="tab" enctype="multipart/form-data">
+	<table align="center">
+			{% for x in data %}
+	<tr><td>Name:</td><td><input type="text" name="name" value="{{x.Name}}" ></td></tr>
+	<tr><td>Email:</td><td><input type="text" name="email" value="{{x.Email}}" ></td></tr>
+	<tr><td>Password:</td><td><input type="text" name="pass" value="{{x.Password}}" ></td></tr>
+	<tr><td>Mobile:</td><td><input type="text" name="ph" value="{{x.Mobile}}" ></td></tr>
+	<tr><td>State:</td><td><input type="text" name="state" value="{{x.State}}" ></td></tr>
+    <tr><td>Dist:</td><td><input type="text" name="dist" value="{{x.Dist}}" ></td></tr>
+	<tr><td>City:</td><td><input type="text" name="city" value="{{x.City}}"></td></tr>
+    {% endfor %}
+	</table>
+
+</form>
+</div>
+</body>
+<style type="text/css">
+	.tab{
+		padding-top: 50px;
+	}
+</style>
+</html>
+{% endblock %}
