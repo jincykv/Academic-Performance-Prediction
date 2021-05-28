@@ -1,0 +1,49 @@
+{% extends 'pending_home.html' %}
+{% block content %}
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="tab">
+
+	<table  align="center" border="1">
+		<tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Mobile</th>
+		<th>State</th>
+		<th>Dist</th>
+		<th>City</th>
+		<th>Status</th>
+		<th>Action</th>
+		
+
+</tr>
+{% for x in views %}
+
+	<tr>
+		<td>{{x.Name}}</td>
+		<td>{{x.Email}}</td>
+	<td>{{x.Mobile}}</td>
+	<td>{{x.State}}</td>
+	<td>{{x.Dist}}</td>
+	<td>{{x.City}}</td>
+    <td>{{x.Status}}</td>
+     <td><a href="/approve/?id={{x.id}}">Approve</a>
+     	<a href="/reject/?id={{x.id}}">/Reject</a>
+     	<a href="/delete/?id={{x.id}}">Delete</a>
+	 
+                 
+ </tr>
+{% endfor %}
+</table>
+</div>
+</body>
+<style type="text/css">
+	.tab{
+		padding-top: 100px;
+	}
+</style>
+</html>
+{% endblock %}

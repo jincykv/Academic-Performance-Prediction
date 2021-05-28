@@ -1,0 +1,109 @@
+{% extends 'Edu_home.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="tab">
+	<h1  align="center">Prediction</h1></div>
+	<form class="tab" action="/prediction/" method="POST">
+		{% csrf_token %} 
+		<table  align="center">
+			<tr><td>Sex:</td><td><select name="sex" class="form-control">
+					<option></option>
+					<option>Female</option>
+					<option>Male</option></td><td>Age:</td><td><input type="number" name="age" class="form-control"></td></tr>
+			<tr><td>Mother_job:</td><td>
+				<select name="mjob" class="form-control">
+					<option></option>
+					<option>Teacher</option>
+					<option>Health</option>
+					<option>Services</option>
+				    <option>At_home</option>
+				    <option>Other</option>
+                 </select></td>
+                 <td>Father_job:</td><td>
+				<select name="fjob" class="form-control">
+					<option></option>
+					<option>Teacher</option>
+					<option>Health</option>
+					<option>Services</option>
+				    <option>At_home</option>
+				    <option>Other</option>
+                 </select></td></tr>
+			<tr><td>Reason:</td><td><select name="reason" class="form-control">
+					<option></option>
+					<option>Home</option>
+					<option>Reputation</option>
+					<option>Course</option>
+					<option>Other</option>
+                 </select></td>
+				<td>Guradian:</td>
+                <td><select name="guard" class="form-control">
+					<option></option>
+					<option>Mother</option>
+					<option>Father</option>
+					<option>Other</option></select></td>
+			</tr>
+			<tr><td>Study_time</td><td><input type="number" name="study" class="form-control"></td><td>Failures:</td><td><input type="number" name="fail" class="form-control"></td></tr>
+			<tr><td>School_support</td><td>
+				<select name="ssup" class="form-control">
+					<option></option>
+					<option>Yes</option>
+					<option>No</option>
+				</select>
+			</td><td>Family_support:</td><td>
+				<select name="fsup" class="form-control">
+					<option></option>
+					<option>Yes</option>
+					<option>No</option>
+				</select>
+			</td></tr>
+			<tr><td>Paid-classes</td><td>
+				<select name="paid" class="form-control">
+					<option></option>
+					<option>Yes</option>
+					<option>No</option>
+				</select>
+			</td><td>Activities:</td><td>
+				<select name="act" class="form-control">
+					<option></option>
+					<option>Yes</option>
+					<option>No</option>
+
+				</select>
+			</td></tr>
+				<tr><td>Internet:</td><td>
+				<select name="net" class="form-control">
+					<option></option>
+					<option>Yes</option>
+					<option>No</option>
+				</select></td>
+				<td>Free_time:</td>
+				<td><input type="number" name="free" class="form-control"></td></tr>
+				<tr><td>Go_out:</td>
+				<td><input type="number" name="out" class="form-control"></td>
+				<td>Health:</td>
+				<td><input type="number" name="health" class="form-control"></td></tr>
+				<tr><td>Absences:</td>
+				<td><input type="number" name="abs" class="form-control"></td>
+			   <td>Period1_score:</td>
+				<td><input type="number" name="score1" class="form-control"></td></tr>
+				<tr><td>Period2_score:</td>
+				<td><input type="number" name="score2" class="form-control"></td>
+				<td>Period3_score:</td>
+				<td><input type="number" name="score3" class="form-control"></td></tr>
+			<tr><td></td><td></td><td><center><input class="tab" type="submit" name="predict" value="Predict"></center></td></tr></table></form>
+
+		
+
+</body>
+<style type="text/css">
+	.tab{
+		margin-top: 60px;
+	}
+</style>
+</html>
+{% endblock %}
